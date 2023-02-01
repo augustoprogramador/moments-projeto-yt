@@ -58,3 +58,10 @@ input[type=submit]:hover {
     border-color: #{$dourado};
     background-color: transparent;
 }
+
+.validation-error p {
+    color: #{$validation-msg};
+    margin-top: .4em;
+    border-left: 3px solid #{$validation-msg};
+    padding-left: .2em;
+}
