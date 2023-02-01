@@ -1,22 +1,60 @@
-:root {
-    --dourado: #dec129;
-    --dourado-hover: #efefef;
-}
+@import 'variables.scss';
 
 * {
     padding: 0;
     margin: 0;
     font-family: Cambria;
     box-sizing: border-box;
-    color: #444;
+    color: #{$dark-gray};
 }
 
 a {
     text-decoration: none;
-    color: #444;
+    color: #{$dark-gray};
     transition: .8s;
 }
 
 a:hover {
-    color: var(--dourado);
+    color: #{$dourado};
+}
+
+/* FORM */
+
+form {
+    width: 450px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: .9em;
+    margin-bottom: .4em;
+}
+
+.form-group input, .form-group textarea {
+    padding: .6em;
+    font-size: .8em;
+    color: #{$medium-gray};
+}
+
+input[type=submit] {
+    background-color: #{$white-gray};
+    border: 2px solid transparent;
+    padding: .6em 1em;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: .4s;
+}
+
+input[type=submit]:hover {
+    color: #{$dourado};
+    border-color: #{$dourado};
+    background-color: transparent;
 }
